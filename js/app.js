@@ -1,5 +1,5 @@
 const m = require('mithril')
-const Animator = require('./js/utils/animator.js')
+const {Animator} = require('jfdcomponents')
 
 const anim = new Animator()
 
