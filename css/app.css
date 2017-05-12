@@ -16,23 +16,23 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .lead {
 
 .maintitle {
     font-weight: 200;
-    font-size: 142px;
-    margin-left: 160px;
-    margin-top: 178px;
+    font-size: 7.3958vw;
+    margin-left: 8.3333vw;
+    margin-top: 9.2708vw;
 }
 
 .mainsubtitle {
     font-weight: bold;
-    font-size: 64px;
-    margin-left: 160px;
-    margin-top: 30px;
+    font-size: 3.3333vw;
+    margin-left: 8.3333vw;
+    margin-top: 1.5625vw;
 }
 
 .mainlogo {
-    height: 162px;
+    height: 8.4375vw;
     position: absolute;
-    left: 160px;
-    bottom: 74px;
+    left: 8.3333vw;
+    bottom: 3.8542vw;
 }
 
 .white {
