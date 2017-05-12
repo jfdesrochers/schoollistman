@@ -1,0 +1,115 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", "Segoe UI", Arial, Helvetica, sans-serif;
+    background: no-repeat center/cover url("../img/background.png");
+    user-select: none;
+    cursor: default;
+    color: #000000;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .lead {
+    font-family: "Montserrat", "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+.maintitle {
+    font-weight: 200;
+    font-size: 142px;
+    margin-left: 160px;
+    margin-top: 178px;
+}
+
+.mainsubtitle {
+    font-weight: bold;
+    font-size: 64px;
+    margin-left: 160px;
+    margin-top: 30px;
+}
+
+.mainlogo {
+    height: 162px;
+    position: absolute;
+    left: 160px;
+    bottom: 74px;
+}
+
+.white {
+    color: #ffffff;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.fadein {
+    animation: fadein 2s ease forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.tut-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tut-panel {
+    position: relative;
+    width: 750px;
+    margin: 80px 0;
+}
+
+.tut-content {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    outline: 0;
+}
+
+.tut-header {
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.tut-header::before, .tut-header::after, .tut-footer::before, .tut-footer::after {
+    content: " ";
+    display: table;
+}
+
+.tut-header::after, .tut-footer::after {
+    clear: both;
+}
+
+.tut-title {
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+.tut-body {
+    position: relative;
+    padding: 20px;
+}
+
+.tut-footer {
+    padding: 20px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+}

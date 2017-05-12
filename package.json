@@ -4,13 +4,14 @@
   "description": "School List Manager / Gestionnaire de Liste Scolaire by/par J-F Desrochers",
   "main": "main.js",
   "scripts": {
-    "package-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --icon=Icon.ico --prune=true --out=../../Desktop/schoollistman-dist --win32metadata.CompanyName=\"Jean-Francois Desrochers\" --win32metadata.FileDescription=\"School List Manager / Gestionnaire de Liste Scolaire by/par J-F Desrochers\" --win32metadata.ProductName=\"School List Manager / Gestionnaire de Liste Scolaire by/par J-F Desrochers\" --electron-version=1.6.6",
-    "package-osx": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=Icon.icns --prune=true --out=../../Desktop/schoollistman-dist --electron-version=1.6.6"
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=x64 --icon=Icon.ico --prune=true --out=../../Desktop/schoollistman-dist --win32metadata.CompanyName=\"Jean-Francois Desrochers\" --win32metadata.FileDescription=\"School List Manager / Gestionnaire de Liste Scolaire by/par J-F Desrochers\" --win32metadata.ProductName=\"School List Manager / Gestionnaire de Liste Scolaire by/par J-F Desrochers\" --electron-version=1.6.7",
+    "package-osx": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=Icon.icns --prune=true --out=../../Desktop/schoollistman-dist --electron-version=1.6.7"
   },
   "author": "Jean-Francois Desrochers",
   "repository": "github:jfdesrochers/schoollistman",
   "license": "ISC",
   "dependencies": {
+    "configstore": "^3.1.0",
     "drivelist": "^5.0.19",
     "glob": "^7.1.1",
     "jfdcomponents": "github:jfdesrochers/jfdcomponents",

@@ -1,0 +1,10 @@
+gobackbtn: < Retour
+
+tut1title: ¿Habla ingles?
+tut1body: Avant de commencer, veuillez choisir la langue principale que vous voulez utiliser dans ce programme.
+tut1choice: Utiliser le français comme langue principale.
+
+tut2title: Ajouter plus de langues?
+tut2body: Si votre magasin est bilingue, vous pouvez afficher un choix de langues à l'écran d'accueil. Les écrans de configuration, etc. demeureront en français.
+tut2choice1: Oui, afficher un choix de langues sur l'écran d'accueil.
+tut2choice2: Non, je n'ai besoin que du français.

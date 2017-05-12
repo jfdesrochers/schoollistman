@@ -14,7 +14,7 @@ function createWindow () {
         minWidth: 960,
         minHeight: 600, 
         fullscreenable: true, 
-        backgroundColor: '#222222'
+        backgroundColor: '#AF9D8D'
     })
     
     // and load the index.html of the app.
@@ -28,7 +28,7 @@ function createWindow () {
     //win.webContents.openDevTools()
 
     win.webContents.on('dom-ready', () => {
-        win.setFullScreen(true)
+        //win.setFullScreen(true)
     })
     
     // Emitted when the window is closed.

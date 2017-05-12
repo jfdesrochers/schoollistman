@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>School List Manager by/par Jean-François Desrochers</title>
         <link href="vendor/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/fonts.css" rel="stylesheet">
         <link href="css/animator.css" rel="stylesheet">
         <link href="css/app.css" rel="stylesheet">
     </head>
@@ -38,6 +39,7 @@
             $(document).bind("keydown", (e) => {
                 if ((e.which || e.keyCode) == 116) {
                     e.preventDefault()
+                    m.route.set('/')
                     location.reload()
                 } else if ((e.which || e.keyCode) == 119) {
                     const {remote} = require('electron');
