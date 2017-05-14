@@ -1,9 +1,9 @@
 const m = require('mithril')
 const {Animator} = require('jfdcomponents')
 const t = require('jfdcomponents').Translator
-const Configstore = require('configstore')
+const Config = require('electron-config')
 
-const conf = new Configstore('schoollistman')
+const conf = new Config()
 const anim = new Animator('mainapp')
 
 const Tutorial = require('./js/ui/tutorial.js')
