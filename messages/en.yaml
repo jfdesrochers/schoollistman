@@ -26,3 +26,6 @@ tut4warning: Warning
 tut4warningbody: While not mandatory, Internet connectivity could be really useful to the future of this project. Are you sure you want to skip this step?
 tut4continue: Sorry, but I can not use Internet of this computer.
 tut4goback: OK, OK, take me back and I will set it up.
+tut5title: "School lists: USB drive preparation"
+tut5body: If it is not done already, prepare a USB drive containing your school lists like in the example above. Each class must be in a separate file and all files must be in PDF format. Then, put the files in folders named after their respective schools. Plug the drive on this computer and tap Continue.
+tut5img: img/usbwindowen.png

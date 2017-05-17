@@ -216,6 +216,28 @@ tutSteps.TutStep4 = {
     }
 }
 
+tutSteps.TutStep5 = {
+    oninit: function (vnode) {
+        let self = this
+    },
+    view: function (vnode) {
+        let self = this
+        return tutWindow(
+            4, Object.keys(tutSteps).length-1,
+            t('tut5title'),
+            [
+                m('img.screen-shot.center-block', {src: t('tut5img')}),
+                m('div.mt30'),
+                m('p', t('tut5body'))
+            ],
+            [
+                m('button.btn.btn-default.pull-left', {onclick: () => {vnode.attrs.changeStep('TutStep4')}}, t('gobackbtn')),
+                m('button.btn.btn-primary.pull-right', {onclick: () => {vnode.attrs.changeStep('TutStep6')}}, t('continuebtn'))
+            ]
+        )
+    }
+}
+
 const Tutorial = {}
 
 Tutorial.oninit = function () {
