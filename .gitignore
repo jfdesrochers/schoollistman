@@ -62,3 +62,6 @@ make_release.sh
 # icons
 Icon.ico
 Icon.icns
+
+# OS X Junk
+.DS_Store
