@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .lead {
     color: #ffffff;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .mt30 {
     margin-top: 30px;
 }
@@ -112,4 +116,13 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .lead {
     padding: 20px;
     text-align: right;
     border-top: 1px solid #e5e5e5;
+}
+
+.tut-image {
+    width: 256px;
+    height: 256px;
+}
+
+.intense {
+    font-weight: 900;
 }

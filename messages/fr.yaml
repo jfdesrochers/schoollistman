@@ -1,10 +1,28 @@
 gobackbtn: < Retour
+continuebtn: Continuer >
 
 tut1title: ¿Habla ingles?
 tut1body: Avant de commencer, veuillez choisir la langue principale que vous voulez utiliser dans ce programme.
 tut1choice: Utiliser le français comme langue principale.
-
 tut2title: Ajouter plus de langues?
 tut2body: Si votre magasin est bilingue, vous pouvez afficher un choix de langues à l'écran d'accueil. Les écrans de configuration, etc. demeureront en français.
 tut2choice1: Oui, afficher un choix de langues sur l'écran d'accueil.
 tut2choice2: Non, je n'ai besoin que du français.
+tut3title: Informations sur votre succursale
+tut3body: Veuillez entrer les informations suivantes à propos de votre succursale.
+tut3districtlabel: Numéro de votre district
+tut3districterror: SVP entrer un numéro de district valide!
+tut3storelabel: Numéro de votre succursale
+tut3storeerror: SVP entrer un numéro de succursale valide!
+tut4title: Connectivité Internet
+tut4sync: Vérification de la connectivité internet en cours, veuillez patienter...
+tut4error: Nous sommes incapables de nous connecter au serveur de base de données. La connectivité Internet est nécessaire pour consolider les statistiques d'utilisation de tous les magasins dans le but d'évaluer la possibilité d'expansion de ce projet. Certaines fonctionnalités comme les mises à jour et l'envoi de commentaires requierent également internet.
+tut4retry: Réessayer de se connecter à Internet.
+tut4minimize: Réduire cette fenêtre pour vous permettre de vous connecter à internet (ex. Wi-Fi).
+tut4ignore: Ignorer tout cela et continuer.
+tut4connectedheader: Internet est connecté.
+tut4connected: La connectivité Internet est nécessaire pour consolider les statistiques d'utilisation de tous les magasins dans le but d'évaluer la possibilité d'expansion de ce projet.
+tut4warning: Avertissement
+tut4warningbody: Malgré ce que soit pas obligatoire, la connectivité Internet peut être vraiment utile à l'avenir de ce projet. Êtes-vous sûr de vouloir sauter cette étape?
+tut4continue: Désolé, mais je ne peux pas utiliser Internet sur cet ordinateur.
+tut4goback: OK, OK, je vais régler Internet.

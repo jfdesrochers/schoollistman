@@ -1,10 +1,28 @@
 gobackbtn: < Go Back
+continuebtn: Continue >
 
 tut1title: ¿Habla ingles?
 tut1body: Before we begin, please choose the main language that you wish to use with this program.
 tut1choice: Use english as the main language.
-
 tut2title: Add more languages?
 tut2body: If your store is biligual, you can have the customer choose his/her preferred language at the title screen. The configuration screens, etc. will remain in english.
 tut2choice1: Yes, have the title screen display a choice of languages.
 tut2choice2: No, I only need english.
+tut3title: Store Information
+tut3body: Please enter the following information about your store.
+tut3districtlabel: District number
+tut3districterror: Please enter a valid district number!
+tut3storelabel: Store number
+tut3storeerror: Please enter a valid store number!
+tut4title: Internet Connectivity
+tut4sync: Checking internet connectivity, please wait...
+tut4error: We are unable to connect the the database server. Internet connectivity is required to consolidate usage statistics from all stores in order to assess any possible future expansion of this project. Some features, such as updates and submitting comments also require internet to work.
+tut4retry: Retry connecting to Internet.
+tut4minimize: Minimize this window to allow you to connect to internet (e.g. Wi-Fi).
+tut4ignore: Ignore all this and continue.
+tut4connectedheader: Internet is connected.
+tut4connected: Internet connectivity is required to consolidate usage statistics from all stores in order to assess any possible future expansion of this project.
+tut4warning: Warning
+tut4warningbody: While not mandatory, Internet connectivity could be really useful to the future of this project. Are you sure you want to skip this step?
+tut4continue: Sorry, but I can not use Internet of this computer.
+tut4goback: OK, OK, take me back and I will set it up.
