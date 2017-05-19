@@ -40,6 +40,7 @@
                 if ((e.which || e.keyCode) == 116) {
                     e.preventDefault()
                     m.route.set('/')
+                    sessionStorage.clear()
                     location.reload()
                 } else if ((e.which || e.keyCode) == 119) {
                     const {remote} = require('electron');

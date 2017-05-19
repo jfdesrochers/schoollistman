@@ -29,3 +29,12 @@ tut4goback: OK, OK, je vais régler Internet.
 tut5title: "Listes scolaires: préparation du lecteur USB"
 tut5body: Si ce n'est pas déjà fait, préparez un lecteur USB avec les listes scolaires comme sur l'exemple ci-dessus. Chaque classe doit être dans son propre fichier et tous les fichiers doivent être en format PDF. Organisez par la suite les classes dans un dossier au nom de l'école. Branchez la clé sur cet ordinateur et appuyez sur Continuer.
 tut5img: img/usbwindowfr.png
+
+usbtitle: Chargement des listes scolaires depuis un lecteur USB
+usbbody: Si vous avez inséré un lecteur USB contenant des listes scolaires, cliquez sur son nom dans la liste ci-dessous pour commencer le chargement. Sinon, insérez-le maintenant et cliquez sur 'Rafraîchir la liste'.
+usblooking: Recherche de lecteurs USB...
+usbcopying: Copie des fichiers en cours...
+usbdrive: Lecteur USB
+usbpdfsfound: " PDF(s) trouvé(s)"
+usbreload: Rafraîchir la liste...
+usberror: Une erreur est survenue lors de la recherche de lecteurs USB. Veuillez essayer de retirer tout périphérique USB non essentiel et réessayer.

@@ -29,3 +29,12 @@ tut4goback: OK, OK, take me back and I will set it up.
 tut5title: "School lists: USB drive preparation"
 tut5body: If it is not done already, prepare a USB drive containing your school lists like in the example above. Each class must be in a separate file and all files must be in PDF format. Then, put the files in folders named after their respective schools. Plug the drive on this computer and tap Continue.
 tut5img: img/usbwindowen.png
+
+usbtitle: Loading school lists from a USB Drive
+usbbody: If you have already inserted a USB Drive containing school lists, click on its name in the list below to begin the loading process. If not, please insert it now and click on the 'Reload list' button.
+usblooking: Looking for USB drives...
+usbcopying: Copying files...
+usbdrive: USB Drive
+usbpdfsfound: " PDF(s) found"
+usbreload: Reload list...
+usberror: There was an error while trying to find USB devices. Please try removing unnecessary USB devices and try again.

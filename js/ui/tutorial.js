@@ -4,6 +4,8 @@ const {Animator, ValidationManager, ValidatingInput} = require('jfdcomponents')
 const t = require('jfdcomponents').Translator
 const env = require('../../env.json')
 
+const usbUI = require('./usbcopy.js')
+
 const conf = new Config()
 const anim = new Animator('tutorial')
 
@@ -217,11 +219,7 @@ tutSteps.TutStep4 = {
 }
 
 tutSteps.TutStep5 = {
-    oninit: function (vnode) {
-        let self = this
-    },
     view: function (vnode) {
-        let self = this
         return tutWindow(
             4, Object.keys(tutSteps).length-1,
             t('tut5title'),
@@ -232,6 +230,26 @@ tutSteps.TutStep5 = {
             ],
             [
                 m('button.btn.btn-default.pull-left', {onclick: () => {vnode.attrs.changeStep('TutStep4')}}, t('gobackbtn')),
+                m('button.btn.btn-primary.pull-right', {onclick: () => {vnode.attrs.changeStep('TutStep6')}}, t('continuebtn'))
+            ]
+        )
+    }
+}
+
+tutSteps.TutStep6 = {
+    oninit: function (vnode) {
+        let self = this
+    },
+    view: function (vnode) {
+        let self = this
+        return tutWindow(
+            5, Object.keys(tutSteps).length-1,
+            t('usbtitle'),
+            [
+                m(usbUI)
+            ],
+            [
+                m('button.btn.btn-default.pull-left', {onclick: () => {vnode.attrs.changeStep('TutStep5')}}, t('gobackbtn')),
                 m('button.btn.btn-primary.pull-right', {onclick: () => {vnode.attrs.changeStep('TutStep6')}}, t('continuebtn'))
             ]
         )

@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: "Poppins", "Segoe UI", Arial, Helvetica, sans-serif;
-    background: no-repeat center/cover url("../img/background.png");
+    background: fixed no-repeat center/cover url("../img/background.png");
     user-select: none;
     cursor: default;
     color: #000000;
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .lead {
 .tut-panel {
     position: relative;
     width: 750px;
-    margin: 80px 0;
+    margin: auto;
 }
 
 .tut-content {
@@ -127,7 +127,43 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .lead {
     font-weight: 900;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .screen-shot {
     width: 650px;
     height: 450px;
 }
+
+.list-icon
+{
+    width: 48px;
+    height: 48px;
+    vertical-align: middle;
+    margin-right: 10px;
+    float: left;
+}
+
+.list-icon-sm
+{
+    width: 19px;
+    height: 19px;
+    font-size: 19px;
+    color: #999;
+    vertical-align: middle;
+    margin-right: 10px;
+    float: left;
+}
+
+.usb-item {
+    overflow: hidden;
+}
+
+.no-anim {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}​
