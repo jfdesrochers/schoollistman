@@ -3,6 +3,14 @@ const {getPDFDrives, copyPDFData} = require('../utils/pdfdrives.js')
 const t = require('jfdcomponents').Translator
 const {remote} = require('electron');
 const path = require('path')
+const _ = require('lodash')
+
+const genUUID = function () {
+    'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
+}
 
 const usbUI = {}
 
@@ -33,7 +41,25 @@ usbUI.oninit = function () {
             self.loadingmessage = t('usbcopying')
             const userDir = path.join(remote.app.getPath('userData'), 'pdfs')
             copyPDFData(files.pdfs, userDir).then((results) => {
-                console.log(results)
+                let resObj = []
+                results.forEach((o) => {
+                    let sIdx = resObj.findIndex((f) => f.name === o[1])
+                    if (sIdx > -1) {
+                        let cIdx = resObj[sIdx].classes.findIndex((f) => f.name === o[2])
+                        if (cIdx > -1) {
+                            resObj[sIdx].classes[cIdx] = {id: o[0], name: o[2]}
+                        } else {
+                            resObj[sIdx].classes.push({id: o[0], name: o[2]})
+                        }
+                    } else {
+                        resObj.push({name: o[1], id: genUUID(), classes: [{name: o[2], id: o[0]}]})
+                    }
+                })
+                resObj = _.sortBy(resObj, [(o) => {
+                    o.classes = _.sortBy(o.classes, ['name'])
+                    return o.name
+                }])
+                console.log(resObj)
             }).catch(() => {
                 self.status = 'driveerror'
                 m.redraw()
