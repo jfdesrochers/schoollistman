@@ -4,21 +4,16 @@ const t = require('jfdcomponents').Translator
 const {remote} = require('electron');
 const path = require('path')
 const _ = require('lodash')
-
-const genUUID = function () {
-    'xxxxxxxxxxxx4xxxyxxxxxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
-        return v.toString(16);
-    });
-}
+const DataStorage = require('../datastorage.js')
 
 const usbUI = {}
 
-usbUI.oninit = function () {
+usbUI.oninit = function (vnode) {
     let self = this
     self.status = 'loading'
     self.drivelist = []
     self.loadingmessage = t('usblooking')
+    self.usbfiles = []
     self.loadUSBDrives = function () {
         self.status = 'loading'
         self.loadingmessage = t('usblooking')
@@ -41,6 +36,8 @@ usbUI.oninit = function () {
             self.loadingmessage = t('usbcopying')
             const userDir = path.join(remote.app.getPath('userData'), 'pdfs')
             copyPDFData(files.pdfs, userDir).then((results) => {
+                self.loadingmessage = t('usbdbupdating')
+                m.redraw()
                 let resObj = []
                 results.forEach((o) => {
                     let sIdx = resObj.findIndex((f) => f.name === o[1])
@@ -52,19 +49,29 @@ usbUI.oninit = function () {
                             resObj[sIdx].classes.push({id: o[0], name: o[2]})
                         }
                     } else {
-                        resObj.push({name: o[1], id: genUUID(), classes: [{name: o[2], id: o[0]}]})
+                        resObj.push({name: o[1], classes: [{name: o[2], id: o[0]}]})
                     }
                 })
                 resObj = _.sortBy(resObj, [(o) => {
                     o.classes = _.sortBy(o.classes, ['name'])
                     return o.name
                 }])
-                console.log(resObj)
-            }).catch(() => {
+                DataStorage.update('schools', 'name', resObj)
+                if (typeof vnode.attrs.onDone === 'function') {
+                    vnode.attrs.onDone(DataStorage.getAllData('schools'))
+                }
+                self.usbfiles = resObj
+                self.status = 'usbtree'
+                m.redraw()
+            }).catch((err) => {
+                console.error('[CopyUSB]', err)
                 self.status = 'driveerror'
                 m.redraw()
             })
         }
+    }
+    self.toggleTree = function (e) {
+        e.target.parentElement.classList.toggle('collapsed')
     }
 }
 
@@ -75,7 +82,23 @@ usbUI.oncreate = function () {
 
 usbUI.view = function () {
     let self = this
-    return [
+    return self.status == 'usbtree' ? [
+        m('p', t('usbtreebody')),
+        m('div.mt30'),
+        m('div.tree', m('ul', m('li.treeparent', [
+            m('span', {onclick: self.toggleTree}, [m('i.treeicon'), t('usbdrive')]),
+            m('ul', self.usbfiles.map((o) => {
+                return m('li.treeparent.collapsed', [
+                    m('span', {onclick: self.toggleTree}, [m('i.treeicon'), o.name]),
+                    m('ul', o.classes.map((c) => {
+                        return m('li', [
+                            m('span', c.name)
+                        ])
+                    }))
+                ])
+            }))
+        ])))
+    ] : [
         m('p', t('usbbody')),
         m('div.mt30'),
         self.status == 'loading' ? [

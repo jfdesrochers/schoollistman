@@ -2,7 +2,7 @@ const m = require('mithril')
 const Config = require('electron-config')
 const {Animator, ValidationManager, ValidatingInput} = require('jfdcomponents')
 const t = require('jfdcomponents').Translator
-const env = require('../../env.json')
+const RemoteAccess = require('../remoteaccess.js')
 
 const usbUI = require('./usbcopy.js')
 
@@ -136,7 +136,7 @@ tutSteps.TutStep4 = {
         let self = this
         self.internetStatus = 'checking'
         self.checkInternet = function () {
-            m.request(env.FIREBASE_URL + '/nettest.json').then((res) => {
+            RemoteAccess.netTest().then((res) => {
                 if (res) {
                     self.internetStatus = 'connected'
                 } else {
@@ -145,17 +145,13 @@ tutSteps.TutStep4 = {
                 m.redraw()
             }).catch((err) => {
                 self.internetStatus = 'error'
-                console.error(err)
+                console.error('[Request]', err)
                 m.redraw()
             })
         }
         self.sendInit = function () {
-            m.request({
-                url: env.FIREBASE_URL + '/stores/' + conf.get('store.district') + '/' + conf.get('store.no') + '.json',
-                method: 'PATCH',
-                data: {installed: true}
-            }).catch((err) => {
-                console.error(err)
+            RemoteAccess.sendStoreData({installed: true}).catch((err) => {
+                console.error('[Request]', err)
             })
         }
         self.checkInternet()
@@ -237,8 +233,9 @@ tutSteps.TutStep5 = {
 }
 
 tutSteps.TutStep6 = {
-    oninit: function (vnode) {
+    oninit: function () {
         let self = this
+        self.canContinue = false
     },
     view: function (vnode) {
         let self = this
@@ -246,11 +243,35 @@ tutSteps.TutStep6 = {
             5, Object.keys(tutSteps).length-1,
             t('usbtitle'),
             [
-                m(usbUI)
+                m(usbUI, {onDone: (data) => {
+                    RemoteAccess.sendStoreData({schools: data}).catch((err) => {
+                        console.error('[Request]', err)
+                    })
+                    self.canContinue = true
+                    m.redraw()
+                }})
             ],
             [
                 m('button.btn.btn-default.pull-left', {onclick: () => {vnode.attrs.changeStep('TutStep5')}}, t('gobackbtn')),
-                m('button.btn.btn-primary.pull-right', {onclick: () => {vnode.attrs.changeStep('TutStep6')}}, t('continuebtn'))
+                self.canContinue ? m('button.btn.btn-primary.pull-right', {onclick: () => {vnode.attrs.changeStep('TutStep7')}}, t('continuebtn')) : ""
+            ]
+        )
+    }
+}
+
+tutSteps.TutStep7 = {
+    view: function () {
+        return tutWindow(
+            6, Object.keys(tutSteps).length-1,
+            t('tut7title'),
+            [
+                m('img.tut-image.center-block', {src: t('stapleslogo')}),
+                m('p', m.trust(t('tut7body'))),
+                m('div.mt30'),
+                m('button.btn.btn-primary.center-block', {onclick: () => {
+                    conf.set('tutorialcompleted', true)
+                    m.route.set('/mainscreen')
+                }}, t('getstarted'))
             ]
         )
     }

@@ -1,12 +1,12 @@
 const m = require('mithril')
-const {Animator} = require('jfdcomponents')
 const t = require('jfdcomponents').Translator
 const Config = require('electron-config')
 
 const conf = new Config()
-const anim = new Animator('mainapp')
 
+const DataStorage = require('./js/datastorage.js')
 const Tutorial = require('./js/ui/tutorial.js')
+const MainScreen = require('./js/ui/mainscreen.js')
 
 const Startup = {}
 
@@ -15,8 +15,9 @@ Startup.oncreate = function () {
         t.loadLang({
             'en': 'messages/en.yaml',
             'fr': 'messages/fr.yaml'
-        }).then(() => {
+        }).then(() => DataStorage.loadDBs(['schools', 'stats'])).then(() => {
             if (conf.get('tutorialcompleted')) {
+                t.setLang(conf.get('defaultlanguage'))
                 m.route.set('/mainscreen')
             } else {
                 m.route.set('/tutorial')
@@ -27,18 +28,15 @@ Startup.oncreate = function () {
 
 Startup.view = function () {
     return [
-        m('h1.maintitle.fadein', ['Bienvenue ', m('span.white', 'Welcome')]),
-        m('h1.mainsubtitle.fadein', ['Chargement en cours... ', m('span.white', 'Now loading...')])
+        m('h1.maintitle.fadein.white', 'Bienvenue'),
+        m('h1.maintitle.secondary.fadein', 'Welcome'),
+        m('h1.mainsubtitle.fadein.white', 'Chargement en cours... '),
+        m('h1.mainsubtitle.secondary.fadein', 'Now loading...')
     ]
 }
 
 m.route(document.getElementById('shcontents'), '/', {
     '/': Startup,
-    '/tutorial': Tutorial
+    '/tutorial': Tutorial,
+    '/mainscreen': MainScreen
 })
-
-/*[
-    m('h1.maintitle', m.trust('Imprimez vos listes scolaires.')),
-    m('h1.mainsubtitle', m.trust('Touchez ici pour commencer.')),
-    m('img.mainlogo', {src: 'img/stapleslogofr.svg'})
-]*/

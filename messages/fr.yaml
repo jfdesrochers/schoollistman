@@ -1,5 +1,7 @@
 gobackbtn: < Retour
 continuebtn: Continuer >
+getstarted: Commencez >
+stapleslogo: img/stapleslogofr.svg
 
 tut1title: ¿Habla ingles?
 tut1body: Avant de commencer, veuillez choisir la langue principale que vous voulez utiliser dans ce programme.
@@ -29,12 +31,20 @@ tut4goback: OK, OK, je vais régler Internet.
 tut5title: "Listes scolaires: préparation du lecteur USB"
 tut5body: Si ce n'est pas déjà fait, préparez un lecteur USB avec les listes scolaires comme sur l'exemple ci-dessus. Chaque classe doit être dans son propre fichier et tous les fichiers doivent être en format PDF. Organisez par la suite les classes dans un dossier au nom de l'école. Branchez la clé sur cet ordinateur et appuyez sur Continuer.
 tut5img: img/usbwindowfr.png
+tut7title: Accès aux réglages
+tut7body: Tout est maintenant prêt! Dans le futur, si vous avez besoin d'accéder aux réglages pour ajouter plus d'écoles, voir les statistiques, rapporter des problèmes et plus, nous avons créé un panneau de réglages pour vous.<br><br>Pour y accéder, double-cliquez sur le logo Bureau en Gros depuis l'égran d'accueil. Vous devrez entrer un mot de passe, il s'agit de votre numéro de magasin préfixé de zéros (ex. si votre numéro de magasin est 40, entrez 0040).<br><br>Nous vous souhaitons une merveilleuse Rentrée Scolaire!
 
 usbtitle: Chargement des listes scolaires depuis un lecteur USB
 usbbody: Si vous avez inséré un lecteur USB contenant des listes scolaires, cliquez sur son nom dans la liste ci-dessous pour commencer le chargement. Sinon, insérez-le maintenant et cliquez sur 'Rafraîchir la liste'.
 usblooking: Recherche de lecteurs USB...
 usbcopying: Copie des fichiers en cours...
+usbdbupdating: Chargement dans la base de données...
 usbdrive: Lecteur USB
 usbpdfsfound: " PDF(s) trouvé(s)"
 usbreload: Rafraîchir la liste...
 usberror: Une erreur est survenue lors de la recherche de lecteurs USB. Veuillez essayer de retirer tout périphérique USB non essentiel et réessayer.
+usbtreebody: "Les écoles et les classes suivantes ont été ajoutées ou mises à jour avec succès dans la base de donnée :"
+
+maintitle: "Imprimez vos listes<br>scolaires."
+mainsubtitle: "Touchez ici pour commencer"
+dualsubtitle: "Touchez ici pour commencer<br>en français"
