@@ -18,6 +18,15 @@ const DataStorage = {
 
     getAllData: function(whichDB) {
         return dataCache[whichDB]
+    },
+
+    getSchoolClasses: function(schoolName) {
+        let result = dataCache['schools'].find((o) => o.name === schoolName)
+        if (result) {
+            return result['classes']
+        } else {
+            return []
+        }
     }
 
 }

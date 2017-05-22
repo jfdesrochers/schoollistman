@@ -48,3 +48,9 @@ usbtreebody: "Les écoles et les classes suivantes ont été ajoutées ou mises 
 maintitle: "Imprimez vos listes<br>scolaires."
 mainsubtitle: "Touchez ici pour commencer"
 dualsubtitle: "Touchez ici pour commencer<br>en français"
+
+chooseschooltitle: Étape 1 - Choisissez une école
+chooseschoolsubtitle: Choisissez dans la liste ci-dessous l'école que fréquente votre enfant.
+chooseclasstitle: Étape 2 - Choisissez une classe
+chooseclasssubtitle: Choisissez dans la liste ci-dessous la classe ou le niveau que fréquentera votre enfant.
+gobackschool: Appuyez ici pour choisir une autre école

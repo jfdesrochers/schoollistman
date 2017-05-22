@@ -48,3 +48,9 @@ usbtreebody: "The following schools and classes were successfully added or updat
 maintitle: "Print your school<br>lists."
 mainsubtitle: "Tap here to begin"
 dualsubtitle: "Tap here to begin<br>in english"
+
+chooseschooltitle: Step 1 - Choose a school
+chooseschoolsubtitle: Please choose the school your child is attending in the list below.
+chooseclasstitle: Step 2 - Choose a class
+chooseclasssubtitle: Please choose the class or the grade your child will be attending in the list below.
+gobackschool: Tap here to choose another school
