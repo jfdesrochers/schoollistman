@@ -178,6 +178,8 @@ a:hover > .dualsubtitle.secondary, a:focus > .dualsubtitle.secondary {
 .tut-body {
     position: relative;
     padding: 20px;
+    max-height: calc(100vh - 180px);
+    overflow: auto;
 }
 
 .tut-footer {
