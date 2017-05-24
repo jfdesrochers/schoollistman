@@ -52,5 +52,11 @@
                 }
             });
         </script>
+
+        <script src="vendor/js/pdf.js"></script>
+        <script>
+            PDFJS.workerSrc = 'vendor/js/pdf.worker.js';
+            PDFJS.disableRange = true;
+        </script>
     </body>
 </html>

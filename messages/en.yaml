@@ -50,7 +50,11 @@ mainsubtitle: "Tap here to begin"
 dualsubtitle: "Tap here to begin<br>in english"
 
 chooseschooltitle: Step 1 - Choose a school
-chooseschoolsubtitle: Please choose the school your child is attending in the list below.
+chooseschoolsubtitle: Please choose the school your child is or will be attending from the list below.
 chooseclasstitle: Step 2 - Choose a class
-chooseclasssubtitle: Please choose the class or the grade your child will be attending in the list below.
+chooseclasssubtitle: Please choose the class or the grade your child will be attending from the list below.
+printclasstitle: Step 3 - Print your list
+printclasssubtitle: Please review your list to the right. If it is the right one, tap on the 'Print your list' button.
+printlistbtn: Print your list
+laststepbtn: Go back to the last step
 gobackschool: Tap here to choose another school

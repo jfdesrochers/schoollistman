@@ -4,6 +4,8 @@ const t = require('jfdcomponents').Translator
 const Config = require('electron-config')
 const _ = require('lodash')
 const UniqueRandom = require('../utils/uniquerandom.js')
+const {remote} = require('electron')
+const path = require('path')
 
 const conf = new Config()
 const anim = new Animator('mainscreen')
@@ -52,6 +54,7 @@ MainScreen.pages.ChooseSchool = {
         self.loadSchool = function (schoolName) {
             return function (e) {
                 e.preventDefault()
+                document.body.scrollTop = 0
                 vnode.attrs.changePage('ChooseClass', schoolName)
             }
         }
@@ -86,10 +89,11 @@ MainScreen.pages.ChooseClass = {
         let self = this
         self.schoolName = vnode.attrs.pageParam
         self.classes = DataStorage.getSchoolClasses(self.schoolName)
-        self.loadClass = function (classID) {
+        self.loadClass = function (classID, className) {
             return function (e) {
                 e.preventDefault()
-                vnode.attrs.changePage('ChooseClass', classID)
+                document.body.scrollTop = 0
+                vnode.attrs.changePage('PrintClass', {id: classID, schoolName: self.schoolName, className: className})
             }
         }
         self.randomColor = UniqueRandom(1, 11, true)
@@ -103,6 +107,7 @@ MainScreen.pages.ChooseClass = {
             m('div.bubble-list', m('div.container-fluid', [
                 m('a.bubble-list-banner[href="#"]', {onclick: (e) => {
                     e.preventDefault()
+                    document.body.scrollTop = 0
                     vnode.attrs.changePage('ChooseSchool')
                 }}, [
                     m('span.glyphicon.glyphicon-chevron-left.pull-left.pad-left'),
@@ -121,7 +126,7 @@ MainScreen.pages.ChooseClass = {
                                 initial = o.name[0]
                             }
                             let size = initial.length <= 3 ? '.x3' : initial.length <= 5 ? '.x2' : ''
-                            return m('div.col-xs-2.text-center', m('a[href="#"]', {onclick: self.loadClass(o.name)}, [
+                            return m('div.col-xs-2.text-center', m('a[href="#"]', {onclick: self.loadClass(o.id, o.name)}, [
                                 m('div.bubble-item', {oncreate: (vdom) => vdom.dom.classList.add('col'+ self.randomColor())}, [
                                     m('div.bubble-inner' + size, initial),
                                 ]),
@@ -131,6 +136,39 @@ MainScreen.pages.ChooseClass = {
                     ])
                 })
             ]))
+        ])
+    }
+}
+
+MainScreen.pages.PrintClass = {
+    oninit: function (vnode) {
+        let self = this
+        self.classID = vnode.attrs.pageParam
+        self.loadClass = function (classID) {
+            return function (e) {
+                e.preventDefault()
+                vnode.attrs.changePage('ChooseClass', classID)
+            }
+        }
+        self.getPDFPath = function (id) {
+            return path.join(remote.app.getPath('userData'), 'pdfs', id + '.pdf')
+        }
+    },
+    
+    view: function (vnode) {
+        let self = this
+        return m('div.page-container.d-flex', [
+            m('div.bubble-list.side-panel', [
+                m('h1.printstep', t('printclasstitle')),
+                m('h3.printsubstep', t('printclasssubtitle')),
+                m('button.btn.btn-primary.btn-block.btn-list', t('printlistbtn')),
+                m('button.btn.btn-default.btn-block.btn-list', {onclick: (e) => {
+                    e.preventDefault()
+                    document.querySelector('iframe').src = ''
+                    vnode.attrs.changePage('ChooseClass', self.classID.schoolName)
+                }}, t('laststepbtn')),
+            ]),
+            m('iframe.d-grow', {src: 'vendor/pdf/web/viewer.html?file=' + self.getPDFPath(self.classID.id)})
         ])
     }
 }

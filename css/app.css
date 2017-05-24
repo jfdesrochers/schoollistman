@@ -468,6 +468,52 @@ h3.bubble-title {
     font-size: 0.7292vw;
 }
 
+.d-flex {
+    display: flex;
+}
+
+.d-flex.col {
+    flex-direction: column;
+}
+
+.d-grow {
+    flex: 1;
+}
+
+iframe {
+    border: none;
+    margin: 0.7813vw;
+    box-shadow: 0 0 1.3021vw 0.2604vw #474747;
+    background-color: #474747;
+}
+
+.side-panel {
+    width: 25vw;
+    padding: 0.7813vw;
+    margin: 0.7813vw;
+}
+
+.printstep {
+    font-size: 2.0833vw;
+    margin: 6.25vw 1.5625vw 0.5208vw 1.5625vw;
+    font-weight: 400;
+}
+
+.printsubstep {
+    font-size: 1.125vw;
+    font-weight: 300;
+    margin-left: 1.5625vw;
+    margin-right: 1.5625vw;
+    margin-bottom: 3.125vw;
+    line-height: 1.42;
+}
+
+.btn-list {
+    margin-top: 1.0416vw!important;
+    font-size: 1.125vw;
+    padding: 1.25vw 0.9375vw;
+}
+
 .col1 {
     background-color: #9C2450;
 }

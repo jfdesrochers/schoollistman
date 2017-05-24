@@ -1,7 +1,7 @@
 const m = require('mithril')
 const {getPDFDrives, copyPDFData} = require('../utils/pdfdrives.js')
 const t = require('jfdcomponents').Translator
-const {remote} = require('electron');
+const {remote} = require('electron')
 const path = require('path')
 const _ = require('lodash')
 const DataStorage = require('../datastorage.js')

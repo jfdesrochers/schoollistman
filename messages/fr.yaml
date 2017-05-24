@@ -50,7 +50,11 @@ mainsubtitle: "Touchez ici pour commencer"
 dualsubtitle: "Touchez ici pour commencer<br>en français"
 
 chooseschooltitle: Étape 1 - Choisissez une école
-chooseschoolsubtitle: Choisissez dans la liste ci-dessous l'école que fréquente votre enfant.
+chooseschoolsubtitle: Choisissez dans la liste ci-dessous l'école que fréquente ou fréquentera votre enfant.
 chooseclasstitle: Étape 2 - Choisissez une classe
 chooseclasssubtitle: Choisissez dans la liste ci-dessous la classe ou le niveau que fréquentera votre enfant.
+printclasstitle: Étape 3 - Imprimez votre liste
+printclasssubtitle: Voyez votre liste ci-contre. Si elle est appropriée, touchez le bouton 'Imprimer votre liste'.
+printlistbtn: Imprimer votre liste
+laststepbtn: Retour à l'étape précédente
 gobackschool: Appuyez ici pour choisir une autre école
