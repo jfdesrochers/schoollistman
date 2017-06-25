@@ -9,14 +9,14 @@ const usbUI = require('./usbcopy.js')
 const conf = new Config()
 const anim = new Animator('tutorial')
 
-const tutWindow = function (stepno, stepcount, title, body, footer) {
-    return m('div.tut-container', m('div.tut-panel', m('div.tut-content', [
+const tutWindow = function (stepno, stepcount, title, body, footer, darken) {
+    return m('div.tut-container' + (darken ? '.darken' : ''), m('div.tut-panel', m('div.tut-content', [
         m('div.tut-header', m('h3.tut-title', title)),
         m('div.tut-body', body),
         footer ? m('div.tut-footer', footer) : '',
-        m('div.progress.no-margin', [
+        stepcount > 0 ? m('div.progress.no-margin', [
             m('div.progress-bar', {style: `width: ${Math.floor(stepno/stepcount*100)}%;`})
-        ])
+        ]) : ''
     ])))
 }
 
@@ -294,4 +294,5 @@ Tutorial.view = function () {
     return m(tutSteps[self.currentStep], {oncreate: anim.create, onremove: anim.remove, key: self.currentStep, changeStep: self.changeStep})
 }
 
-module.exports = Tutorial
+module.exports.Tutorial = Tutorial
+module.exports.tutWindow = tutWindow

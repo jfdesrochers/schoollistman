@@ -5,7 +5,7 @@ const Config = require('electron-config')
 const conf = new Config()
 
 const DataStorage = require('./js/datastorage.js')
-const Tutorial = require('./js/ui/tutorial.js')
+const {Tutorial} = require('./js/ui/tutorial.js')
 const MainScreen = require('./js/ui/mainscreen.js')
 
 const Startup = {}

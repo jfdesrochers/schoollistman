@@ -58,3 +58,13 @@ printclasssubtitle: Voyez votre liste ci-contre. Si elle est appropriée, touche
 printlistbtn: Imprimer votre liste
 laststepbtn: Retour à l'étape précédente
 gobackschool: Appuyez ici pour choisir une autre école
+gobacktitle: Retourner à l'écran d'acceuil
+gobacksubtitle: Appuyez ici pour retourner à l'écran d'accueil
+
+nowprintingtitle: Impression de votre liste...
+printingstatus: Votre liste est en cours d'impression, veuillez patienter...
+printerrortitle: Erreur lors de l'impression de votre liste
+printerror: Une erreur est survenue lors de l'impression de votre liste. Veuillez demander de l'aide à un associé.
+doneprintingtitle: Impression de votre liste terminée!
+printdone: Votre liste a été envoyée à l'imprimante. Veuillez appuyer sur le bouton ci-dessous pour retourner à l'écran d'accueil.
+closebtn: Fermer

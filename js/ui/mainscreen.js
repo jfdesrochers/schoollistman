@@ -7,10 +7,13 @@ const UniqueRandom = require('../utils/uniquerandom.js')
 const {remote} = require('electron')
 const path = require('path')
 
+const {exec} = require('child_process')
+
 const conf = new Config()
 const anim = new Animator('mainscreen')
 
 const DataStorage = require('../datastorage.js')
+const {tutWindow} = require('./tutorial.js')
 
 const MainScreen = {pages: {}}
 
@@ -61,12 +64,21 @@ MainScreen.pages.ChooseSchool = {
         self.randomColor = UniqueRandom(1, 11, true)
     },
     
-    view: function () {
+    view: function (vnode) {
         let self = this
         return m('div.page-container', [
             m('h1.schoolstep', t('chooseschooltitle')),
             m('h3.schoolsubstep', t('chooseschoolsubtitle')),
             m('div.bubble-list', m('div.container-fluid', [
+                m('a.bubble-list-banner[href="#"]', {onclick: (e) => {
+                    e.preventDefault()
+                    document.body.scrollTop = 0
+                    vnode.attrs.changePage('TitlePage')
+                }}, [
+                    m('span.glyphicon.glyphicon-chevron-left.pull-left.pad-left'),
+                    m('h4.bubble-list-banner-heading', t('gobacktitle')),
+                    m('p.bubble-list-banner-text', t('gobacksubtitle'))
+                ]),
                 _.chunk(self.schools, 4).map((a) => {
                     return m('div.row', [
                         a.map((o) => {
@@ -144,6 +156,7 @@ MainScreen.pages.PrintClass = {
     oninit: function (vnode) {
         let self = this
         self.classID = vnode.attrs.pageParam
+        self.printstatus = 'notprinting'
         self.loadClass = function (classID) {
             return function (e) {
                 e.preventDefault()
@@ -153,15 +166,55 @@ MainScreen.pages.PrintClass = {
         self.getPDFPath = function (id) {
             return path.join(remote.app.getPath('userData'), 'pdfs', id + '.pdf')
         }
+        self.printList = function (e) {
+            e.preventDefault()
+            self.printstatus = 'nowprinting'
+            exec('"' + path.join(remote.app.getAppPath(), 'printhelper', 'SumatraPDF.exe') + '" -print-to-default -print-settings "fit" -silent "' + self.getPDFPath(self.classID.id) + '"', (err) => {
+                if (err) {
+                    console.error('[Printing] Error while printing', err)
+                    self.printstatus = 'printerror'
+                    m.redraw()
+                } else {
+                    self.printstatus = 'doneprinting'
+                    m.redraw()
+                }
+            })
+        }
     },
     
     view: function (vnode) {
         let self = this
         return m('div.page-container.d-flex', [
+            self.printstatus != 'notprinting' ? tutWindow(0, 0, t(self.printstatus + 'title'), 
+            [
+                self.printstatus == 'nowprinting' ? [
+                    m('img.center-block.tut-image', {src: 'img/printiconsync.png'}),
+                    m('h4.text-center', t('printingstatus')),
+                    m('div.progress', m('div.progress-bar.progress-bar-striped.progress-bar-success.active', {style: 'width: 100%;'}))
+                ] : self.printstatus == 'printerror' ? [
+                    m('img.center-block.tut-image', {src: 'img/printiconerror.png'}),
+                    m('p', t('printerror'))
+                ] : self.printstatus == 'doneprinting' ? [
+                    m('img.center-block.tut-image', {src: 'img/printicongood.png'}),
+                    m('p', t('printdone'))
+                ] : ''
+            ], [
+                self.printstatus == 'printerror' ? [
+                    m('button.btn.btn-primary.pull-right', {onclick: (e) => {
+                        e.preventDefault()
+                        self.printstatus = 'notprinting'
+                    }}, t('closebtn'))
+                ] : self.printstatus == 'doneprinting' ? [
+                    m('button.btn.btn-primary.pull-right', {onclick: (e) => {
+                        e.preventDefault()
+                        vnode.attrs.changePage('TitlePage')
+                    }}, t('gobacktitle'))
+                ] : ''
+            ], true) : '',
             m('div.bubble-list.side-panel', [
                 m('h1.printstep', t('printclasstitle')),
                 m('h3.printsubstep', t('printclasssubtitle')),
-                m('button.btn.btn-primary.btn-block.btn-list', t('printlistbtn')),
+                m('button.btn.btn-primary.btn-block.btn-list', {onclick: self.printList}, t('printlistbtn')),
                 m('button.btn.btn-default.btn-block.btn-list', {onclick: (e) => {
                     e.preventDefault()
                     document.querySelector('iframe').src = ''

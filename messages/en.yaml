@@ -54,7 +54,17 @@ chooseschoolsubtitle: Please choose the school your child is or will be attendin
 chooseclasstitle: Step 2 - Choose a class
 chooseclasssubtitle: Please choose the class or the grade your child will be attending from the list below.
 printclasstitle: Step 3 - Print your list
-printclasssubtitle: Please review your list to the right. If it is the right one, tap on the 'Print your list' button.
+printclasssubtitle: Please review your list on the right. If it is the right one, tap on the 'Print your list' button.
 printlistbtn: Print your list
 laststepbtn: Go back to the last step
 gobackschool: Tap here to choose another school
+gobacktitle: Go back to the title screen
+gobacksubtitle: Tap here to go back to the title screen
+
+nowprintingtitle: Printing your list...
+printingstatus: Your list is currently printing, please wait...
+printerrortitle: Error while printing your list
+printerror: An error occured while printing your list. Please ask a store associate for help.
+doneprintingtitle: Done printing your list!
+printdone: Your list has been sent to the printer. Please tap the button below to return to the title screen.
+closebtn: Close

@@ -140,6 +140,10 @@ a:hover > .dualsubtitle.secondary, a:focus > .dualsubtitle.secondary {
     align-items: center;
 }
 
+.darken {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
 .tut-panel {
     position: relative;
     width: 750px;
