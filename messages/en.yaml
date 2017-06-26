@@ -1,7 +1,9 @@
 gobackbtn: < Go Back
 continuebtn: Continue >
+savebtn: Save
 getstarted: Get Started >
 stapleslogo: img/stapleslogoen.svg
+exitapp: Exit this application and return to desktop
 
 tut1title: ¿Habla ingles?
 tut1body: Before we begin, please choose the main language that you wish to use with this program.
@@ -68,3 +70,46 @@ printerror: An error occured while printing your list. Please ask a store associ
 doneprintingtitle: Done printing your list!
 printdone: Your list has been sent to the printer. Please tap the button below to return to the title screen.
 closebtn: Close
+
+passtitle: Access to the settings section
+passdesc: To continue, please enter your access code.
+passerror: Try again.
+
+stmaintitle: Settings main menu
+stmaindesc: Please choose from the options below.
+
+langoptions: Language settings
+langdesc: Here you can change your default language settings.
+
+storeoptions: Store information
+storedesc: Here you can change your store and district numbers.
+
+usbload: Load new lists from USB
+
+listedit: Edit schools and lists
+listeditbody: Use the tree below to rename or remove schools or classes. Press the save button when you are done to commit your changes.
+listeditwarning: <strong>Important!</strong> Once the changes are saved, the operation is <strong>irreversible</strong>! Please use this tool with caution.
+schoollists: School Lists
+
+getstats: View the print statistics
+statsdesc: "Here are the print statistics for all the schools in the database :"
+statsschoolname: School name
+statsclassname: Class name
+statstotals: Total of prints
+showclasses: Show detailed information for each class
+downstats: Save statistics as Excel
+
+feedback: Questions, Comments, Bugs
+feedbackdesc: Please use the form below to report any bugs you encounter, any comment or any question you have. It will go directly into my bug tracking system and you will get a link to follow its progress.
+fdnamedesc: Your name
+fdnotemptyerror: This field cannot be empty.
+fdstoredesc: Your store number
+fdstoreerror: Please enter a valid store number.
+fdemaildesc: Your email address
+fdemailerror: Please enter a valid email address.
+fdmsgdesc: Your message
+fdsendbutton: Send your feedback
+fdsending: We are sending your feedback, please wait...
+fdsent: Your comments have been successfully sent. Please note the address below if you want to follow the progress towards a resolution (if applicable).
+fderror: An error occured while trying to send your comments. Please check your internet connectivity and try again.
+fderrorform: Return to the form

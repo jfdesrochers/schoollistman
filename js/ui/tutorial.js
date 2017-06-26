@@ -3,6 +3,7 @@ const Config = require('electron-config')
 const {Animator, ValidationManager, ValidatingInput} = require('jfdcomponents')
 const t = require('jfdcomponents').Translator
 const RemoteAccess = require('../remoteaccess.js')
+const Mousetrap = require('mousetrap')
 
 const usbUI = require('./usbcopy.js')
 
@@ -233,10 +234,18 @@ tutSteps.TutStep5 = {
 }
 
 tutSteps.TutStep6 = {
-    oninit: function () {
+    oninit: function (vnode) {
         let self = this
         self.canContinue = false
+        Mousetrap.bind('up up down down left right left right', () => {
+            vnode.attrs.changeStep('TutStep7')
+        })
     },
+
+    onremove: function () {
+        Mousetrap.unbind('up up down down left right left right')
+    },
+
     view: function (vnode) {
         let self = this
         return tutWindow(

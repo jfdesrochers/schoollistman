@@ -1,7 +1,9 @@
 gobackbtn: < Retour
 continuebtn: Continuer >
+savebtn: Sauvegarder
 getstarted: Commencez >
 stapleslogo: img/stapleslogofr.svg
+exitapp: Quitter cette application et retourner au bureau
 
 tut1title: ¿Habla ingles?
 tut1body: Avant de commencer, veuillez choisir la langue principale que vous voulez utiliser dans ce programme.
@@ -32,7 +34,7 @@ tut5title: "Listes scolaires: préparation du lecteur USB"
 tut5body: Si ce n'est pas déjà fait, préparez un lecteur USB avec les listes scolaires comme sur l'exemple ci-dessus. Chaque classe doit être dans son propre fichier et tous les fichiers doivent être en format PDF. Organisez par la suite les classes dans un dossier au nom de l'école. Branchez la clé sur cet ordinateur et appuyez sur Continuer.
 tut5img: img/usbwindowfr.png
 tut7title: Accès aux réglages
-tut7body: Tout est maintenant prêt! Dans le futur, si vous avez besoin d'accéder aux réglages pour ajouter plus d'écoles, voir les statistiques, rapporter des problèmes et plus, nous avons créé un panneau de réglages pour vous.<br><br>Pour y accéder, double-cliquez sur le logo Bureau en Gros depuis l'égran d'accueil. Vous devrez entrer un mot de passe, il s'agit de votre numéro de magasin préfixé de zéros (ex. si votre numéro de magasin est 40, entrez 0040).<br><br>Nous vous souhaitons une merveilleuse Rentrée Scolaire!
+tut7body: Tout est maintenant prêt! Dans le futur, si vous avez besoin d'accéder aux réglages pour ajouter plus d'écoles, voir les statistiques, rapporter des problèmes et plus, nous avons créé un panneau de réglages pour vous.<br><br>Pour y accéder, double-cliquez sur le logo Bureau en Gros depuis l'écran d'accueil. Vous devrez entrer un mot de passe, il s'agit de votre numéro de magasin préfixé de zéros (ex. si votre numéro de magasin est 40, entrez 0040).<br><br>Nous vous souhaitons une merveilleuse Rentrée Scolaire!
 
 usbtitle: Chargement des listes scolaires depuis un lecteur USB
 usbbody: Si vous avez inséré un lecteur USB contenant des listes scolaires, cliquez sur son nom dans la liste ci-dessous pour commencer le chargement. Sinon, insérez-le maintenant et cliquez sur 'Rafraîchir la liste'.
@@ -68,3 +70,46 @@ printerror: Une erreur est survenue lors de l'impression de votre liste. Veuille
 doneprintingtitle: Impression de votre liste terminée!
 printdone: Votre liste a été envoyée à l'imprimante. Veuillez appuyer sur le bouton ci-dessous pour retourner à l'écran d'accueil.
 closebtn: Fermer
+
+passtitle: Accès à la section des réglages
+passdesc: Veuillez entrer votre code d'accès pour continuer.
+passerror: Essayez encore.
+
+stmaintitle: Menu principal des réglages
+stmaindesc: Veuillez choisir parmi les options ci-dessous.
+
+langoptions: Options de langues
+langdesc: Ici vous pouvez changer vos options de langue par défaut.
+
+storeoptions: Informations du magasin
+storedesc: Ici vous pouvez changer vos numéros de magasin et district.
+
+usbload: Charger des listes via USB
+
+listedit: Modifier les écoles et les listes
+listeditbody: Utilisez l'arborescence ci-dessous pour renommer ou supprimer des écoles ou des classes. Appuyez sur le bouton sauvegarder une fois terminé pour confirmer vos changements.
+listeditwarning: <strong>Important!</strong> Une fois les changements sauvegardés, l'opération est <strong>irréversible</strong>! Utilisez donc cet outil avec prudence.
+schoollists: Listes Scolaires
+
+getstats: Voir les statistiques d'impression
+statsdesc: "Voici les statistiques d'impression pour toutes les écoles dans la base de données :"
+statsschoolname: Nom de l'école
+statsclassname: Nom de la classe
+statstotals: Total des impressions
+showclasses: Afficher les informations détaillées pour chaque classe
+downstats: Enregistrer les statistiques en Excel
+
+feedback: Questions, Commentaires
+feedbackdesc: Veuillez utiliser le formulaire ci-dessous pour rapporter tout problème qui survient, tout commentaire ou toute question. Vos commentaires iront directement dans mon système de suive des problèmes et vous recevrez un lien pour suivre sa progression.
+fdnamedesc: Votre nom
+fdnotemptyerror: Ce champ ne peut pas être vide.
+fdstoredesc: Votre numéro de magasin
+fdstoreerror: Veuillez entrer un numéro de magasin valide.
+fdemaildesc: Votre adresse courriel
+fdemailerror: Veuillez entrer une adresse courriel valide.
+fdmsgdesc: Votre message
+fdsendbutton: Envoyer vos commentaires
+fdsending: Nous envoyons vos commentaires, veuillez patienter...
+fdsent: Vos commentaires ont été transmis avec succès. Veuillez noter l'adresse suivante pour suivre la progression de la résolution du problème (s'il y a lieu).
+fderror: Une erreur est survenue lors de l'envoi de votre commentaire. Veuillez vérifier votre connexion internet et réessayer.
+fderrorform: Retour au formulaire

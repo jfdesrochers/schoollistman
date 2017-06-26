@@ -28,7 +28,7 @@ function createWindow () {
     //win.webContents.openDevTools()
 
     win.webContents.on('dom-ready', () => {
-        //win.setFullScreen(true)
+        win.setFullScreen(true)
     })
     
     // Emitted when the window is closed.
@@ -44,7 +44,7 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', () => {
-    //powerSaveBlocker.start('prevent-display-sleep')
+    powerSaveBlocker.start('prevent-display-sleep')
     createWindow()
 })
 

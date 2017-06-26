@@ -13,9 +13,12 @@ const conf = new Config()
 const anim = new Animator('mainscreen')
 
 const DataStorage = require('../datastorage.js')
+const RemoteAccess = require('../remoteaccess.js')
 const {tutWindow} = require('./tutorial.js')
 
+const Settings = require('./settings.js')
 const MainScreen = {pages: {}}
+_.assign(MainScreen.pages, Settings.pages)
 
 MainScreen.pages.TitlePage = {
     oninit: function (vnode) {
@@ -32,6 +35,14 @@ MainScreen.pages.TitlePage = {
                 vnode.attrs.changePage('ChooseSchool')
             }
         }
+
+        self.goToSettings = function (lang) {
+            return (e) => {
+                e.preventDefault()
+                t.setLang(lang)
+                vnode.attrs.changePage('stPassCode')
+            }
+        }
     },
     view: function () {
         let self = this
@@ -40,12 +51,12 @@ MainScreen.pages.TitlePage = {
             m('h1.dualtitle.secondary', m.trust(t('maintitle', self.seclang))),
             m('a[href="#"]', {onclick: self.goToSchools(self.mainlang)}, m('h1.dualsubtitle.white.bordered', m.trust(t('dualsubtitle', self.mainlang)))),
             m('a[href="#"]', {onclick: self.goToSchools(self.seclang)}, m('h1.dualsubtitle.secondary.bordered', m.trust(t('dualsubtitle', self.seclang)))),
-            m('img.duallogo', {src: t('stapleslogo', self.mainlang)}),
-            m('img.duallogo.secondary', {src: t('stapleslogo', self.seclang)})
+            m('img.duallogo', {src: t('stapleslogo', self.mainlang), ondblclick: self.goToSettings(self.mainlang)}),
+            m('img.duallogo.secondary', {src: t('stapleslogo', self.seclang), ondblclick: self.goToSettings(self.seclang)})
         ] : [
             m('h1.maintitle.white', m.trust(t('maintitle'))),
             m('a[href="#"]', {onclick: self.goToSchools(self.mainlang)}, m('h1.mainsubtitle.white.bordered', m.trust(t('mainsubtitle')))),
-            m('img.mainlogo', {src: t('stapleslogo')})
+            m('img.mainlogo', {src: t('stapleslogo'), ondblclick: self.goToSettings(self.mainlang)})
         ])
     }
 }
@@ -157,6 +168,7 @@ MainScreen.pages.PrintClass = {
         let self = this
         self.classID = vnode.attrs.pageParam
         self.printstatus = 'notprinting'
+        self.allstats = DataStorage.getAllData('stats')
         self.loadClass = function (classID) {
             return function (e) {
                 e.preventDefault()
@@ -175,8 +187,18 @@ MainScreen.pages.PrintClass = {
                     self.printstatus = 'printerror'
                     m.redraw()
                 } else {
-                    self.printstatus = 'doneprinting'
-                    m.redraw()
+                    if (self.allstats[self.classID.id]) {
+                        self.allstats[self.classID.id] = self.allstats[self.classID.id] + 1
+                    } else {
+                        self.allstats[self.classID.id] = 1
+                    }
+                    DataStorage.replace('stats', '', self.allstats).then(() => {
+                        RemoteAccess.sendStoreData({stats: self.allstats}).catch((err) => {
+                            console.error('[Request]', err)
+                        })
+                        self.printstatus = 'doneprinting'
+                        m.redraw()
+                    })
                 }
             })
         }

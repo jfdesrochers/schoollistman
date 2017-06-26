@@ -16,6 +16,17 @@ const RemoteAccess = {
             method: 'PATCH',
             data: data
         })
+    },
+
+    sendFeedBack: function (data) {
+        return m.request({
+            url: 'https://api.github.com/repos/jfdesrochers/schoollistman/issues?access_token=' + env.GITHUB_TOKEN,
+            method: 'POST',
+            data: {
+                title: "Feedback from School List Manager",
+                body: data
+            }
+        })
     }
 
 }

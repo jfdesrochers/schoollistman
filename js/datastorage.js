@@ -16,6 +16,14 @@ const DataStorage = {
         return q.nfcall(storage.set, whichDB, dataCache[whichDB]).catch((err) => console.error('[StorageDB]', err))
     },
 
+    replace: function(whichDB, sortBy, newData) {
+        dataCache[whichDB] = _.cloneDeep(newData)
+        if (sortBy) {
+            dataCache[whichDB] = _.sortBy(dataCache[whichDB], sortBy)
+        }
+        return q.nfcall(storage.set, whichDB, dataCache[whichDB]).catch((err) => console.error('[StorageDB]', err))
+    },
+
     getAllData: function(whichDB) {
         return dataCache[whichDB]
     },
