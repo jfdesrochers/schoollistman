@@ -1,0 +1,49 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "School List Manager - Gestionnaire de Listes Scolaires\n\u00b6\n\n\nBienvenue dans la Documentation !\n\u00b6\n\n\nPour continuer en fran\u00e7ais, veuillez cliquer \nici\n.\n\n\nWelcome to the Documentation !\n\u00b6\n\n\nTo continue in english, please click \nhere\n.",
+            "title": "Home - Accueil"
+        },
+        {
+            "location": "/#school-list-manager-gestionnaire-de-listes-scolaires",
+            "text": "",
+            "title": "School List Manager - Gestionnaire de Listes Scolaires"
+        },
+        {
+            "location": "/#bienvenue-dans-la-documentation",
+            "text": "Pour continuer en fran\u00e7ais, veuillez cliquer  ici .",
+            "title": "Bienvenue dans la Documentation !"
+        },
+        {
+            "location": "/#welcome-to-the-documentation",
+            "text": "To continue in english, please click  here .",
+            "title": "Welcome to the Documentation !"
+        },
+        {
+            "location": "/fr/preparation/",
+            "text": "Pr\u00e9paration\n\u00b6\n\n\nVoici quelques \u00e9tapes de pr\u00e9paration importantes avant de pouvoir commencer \u00e0 utiliser le programme.\n\n\nMat\u00e9riel requis\n\u00b6\n\n\nPour assurer le bon fonctionnement du programme, assurez-vous d'avoir l'\u00e9quipement suivant en place:\n\n\n\n\nUn ordinateur Tout-en-un, pr\u00e9f\u00e9rablement avec un \u00e9cran tactile: cela facillitera l'interaction des clients avec le programme.\n\n\nUne imprimante monochrome, pr\u00e9f\u00e9rablement laser: pour imprimer les listes scolaires.\n\n\nUne cl\u00e9 USB d'au moins 4 GB pour stocker les listes scolaires.\n\n\n\n\n\n\nImportant\n\n\nAssurez-vous que l'ordinateur est compl\u00e8tement install\u00e9 et que le mode de d\u00e9monstration \nn'est pas\n activ\u00e9, car ce mode efface les donn\u00e9es personnelles automatiquement, ce qui prouverait catastrophique pour ce projet!\n\n\n\n\n\n\nNote\n\n\nAssurez-vous que le pilote de l'imprimante est install\u00e9 et que cette derni\u00e8re est r\u00e9gl\u00e9e comme imprimante \npar d\u00e9faut\n. Nous vous conseillons \u00e9galement de brancher l'imprimante directement par usb, pour \u00e9viter les complications du r\u00e9seau.\n\n\n\n\nPr\u00e9paration des listes scolaires\n\u00b6\n\n\nCette \u00e9tape est cruciale au bon fonctionnement de l'ensemble du projet et l'attention que vous y porterez vous \u00e9vitera beaucoup de travail plus tard.",
+            "title": "Pr\u00e9paration"
+        },
+        {
+            "location": "/fr/preparation/#preparation",
+            "text": "Voici quelques \u00e9tapes de pr\u00e9paration importantes avant de pouvoir commencer \u00e0 utiliser le programme.",
+            "title": "Pr\u00e9paration"
+        },
+        {
+            "location": "/fr/preparation/#materiel-requis",
+            "text": "Pour assurer le bon fonctionnement du programme, assurez-vous d'avoir l'\u00e9quipement suivant en place:   Un ordinateur Tout-en-un, pr\u00e9f\u00e9rablement avec un \u00e9cran tactile: cela facillitera l'interaction des clients avec le programme.  Une imprimante monochrome, pr\u00e9f\u00e9rablement laser: pour imprimer les listes scolaires.  Une cl\u00e9 USB d'au moins 4 GB pour stocker les listes scolaires.    Important  Assurez-vous que l'ordinateur est compl\u00e8tement install\u00e9 et que le mode de d\u00e9monstration  n'est pas  activ\u00e9, car ce mode efface les donn\u00e9es personnelles automatiquement, ce qui prouverait catastrophique pour ce projet!    Note  Assurez-vous que le pilote de l'imprimante est install\u00e9 et que cette derni\u00e8re est r\u00e9gl\u00e9e comme imprimante  par d\u00e9faut . Nous vous conseillons \u00e9galement de brancher l'imprimante directement par usb, pour \u00e9viter les complications du r\u00e9seau.",
+            "title": "Mat\u00e9riel requis"
+        },
+        {
+            "location": "/fr/preparation/#preparation-des-listes-scolaires",
+            "text": "Cette \u00e9tape est cruciale au bon fonctionnement de l'ensemble du projet et l'attention que vous y porterez vous \u00e9vitera beaucoup de travail plus tard.",
+            "title": "Pr\u00e9paration des listes scolaires"
+        },
+        {
+            "location": "/en/",
+            "text": "",
+            "title": "Guide: School List Manager"
+        }
+    ]
+}
