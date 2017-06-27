@@ -2,7 +2,7 @@
 
 ## Bienvenue dans la Documentation !
 
-Pour continuer en français, veuillez cliquer [ici](/fr).
+Pour continuer en français, veuillez cliquer [ici](/fr/preparation).
 
 ## Welcome to the Documentation !
 
