@@ -17,6 +17,24 @@
      <changefreq>daily</changefreq>
     </url>
         
+    <url>
+     <loc>/fr/installation/</loc>
+     <lastmod>2017-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/fr/configuration/</loc>
+     <lastmod>2017-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/fr/reglagesetplus/</loc>
+     <lastmod>2017-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     

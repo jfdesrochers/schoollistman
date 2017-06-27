@@ -10,9 +10,12 @@ docs_dir: 'docs_src'
 site_dir: 'docs'
 pages:
   - 'Home - Accueil': 'index.md'
-  - 'Manuel: Gestionnaire de Listes Scolaires':
+  - 'Gestionnaire de Listes Scolaires (français)':
     - 'Préparation': 'fr/preparation.md'
-  - 'Guide: School List Manager': 'en.md'
+    - 'Installation': 'fr/installation.md'
+    - 'Configuration': 'fr/configuration.md'
+    - 'Réglages et plus': 'fr/reglagesetplus.md'
+  - 'School List Manager (english)': 'en.md'
 
 # Copyright
 copyright: 'Copyright &copy; 2017 Jean-Francois Desrochers'
