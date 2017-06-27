@@ -1,0 +1,40 @@
+# Project information
+site_name: 'Documentation'
+site_description: 'School List Manager - Gestionnaire de Listes Scolaires'
+site_author: 'Jean-Francois Desrochers'
+#site_url: 'https://jfdesrochers.github.io/schoollistman'
+
+# Project structure
+
+docs_dir: 'docs_src'
+site_dir: 'docs'
+pages:
+  - 'Home - Accueil': 'index.md'
+  - 'Manuel: Gestionnaire de Listes Scolaires':
+    - 'Préparation': 'fr/preparation.md'
+  - 'Guide: School List Manager': 'en.md'
+
+# Copyright
+copyright: 'Copyright &copy; 2017 Jean-Francois Desrochers'
+
+# Documentation and theme
+theme: 'material'
+
+# Options
+extra:
+  logo: 'img/logo.svg'
+  palette:
+    primary: 'indigo'
+    accent: 'amber'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  social:
+    - type: 'github'
+      link: 'https://github.com/jfdesrochers/schoollistman'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite(guess_lang=false)
+  - toc(permalink=true)
