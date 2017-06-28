@@ -38,11 +38,31 @@
     
 
     
+        
     <url>
-     <loc>/en/</loc>
+     <loc>/en/gettingstarted/</loc>
      <lastmod>2017-06-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/en/installation/</loc>
+     <lastmod>2017-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/en/setup/</loc>
+     <lastmod>2017-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/en/settingsandmore/</loc>
+     <lastmod>2017-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>

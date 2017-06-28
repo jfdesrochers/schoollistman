@@ -18,7 +18,7 @@ Voici les différentes apparences de l'écran d'accueil avec l'option bilingue o
 
 ## Informations sur votre succursale
 
-La prochaine étape est d'entre votre numéro de succursale ainsi que votre district. Cela permettra d'identifier votre succursale dans les statistiques et servira de code d'accès pour certaines fonctions du programme (plus sur ce sujet dans la prochaine section).
+La prochaine étape est d'entrer votre numéro de succursale ainsi que votre district. Cela permettra d'identifier votre succursale dans les statistiques et servira de code d'accès pour certaines fonctions du programme (plus sur ce sujet dans la prochaine section).
 
 ![](/img/schoollistman-fr-4.png)
 

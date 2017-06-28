@@ -4,7 +4,7 @@ Voici quelques étapes de préparation importantes avant de pouvoir commencer à
 
 ## Matériel requis
 
-Pour assurer le bon fonctionnement du programme, assurez-vous d'avoir l'équipement suivant en place:
+Pour assurer le bon fonctionnement du programme, assurez-vous d'avoir l'équipement suivant en place :
 
 * Un ordinateur Tout-en-un, préférablement avec un écran tactile: cela facillitera l'interaction des clients avec le programme.
 * Une imprimante monochrome, préférablement laser: pour imprimer les listes scolaires.
@@ -32,7 +32,7 @@ Cette étape est cruciale au bon fonctionnement de l'ensemble du projet et l'att
 
 ### Ajouter les dossiers des écoles
 
-Dans le dossier `Listes Scolaires`, créer des dossiers pour chaque école dont vous avez les listes
+Dans le dossier `Listes Scolaires`, créez des dossiers pour chaque école dont vous avez les listes :
 
 ![](/img/explorer-fr-2.png)
 
@@ -43,6 +43,6 @@ Enfin, dans chaque dossier d'école, créez un fichier PDF identifiant chaque cl
 ![](/img/explorer-fr-3.png)
 
 !!! warning "Attention !"
-    Assurez-vous que le nom de vos dossiers / fichier soit parfaitement adéquat: bonne ponctuation, bon usage des majuscules/minuscules et bon orthographe. Cela vous évitera d'avoir à tout renommer une fois dans le programme.
+    Assurez-vous que le nom de vos dossiers / fichiers soit parfaitement adéquat: bonne ponctuation, bon usage des majuscules/minuscules et bon orthographe. Cela vous évitera d'avoir à tout renommer une fois dans le programme.
 
-Une fois l'installation terminée, avancez à [la prochaine étape](installation).
+Une fois la préparation terminée, vous pouvez maintenant avancer à l'ordinateur tout-en-un et passer à [la prochaine étape](installation).

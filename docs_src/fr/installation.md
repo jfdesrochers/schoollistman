@@ -4,7 +4,7 @@ Nous allons maintenant procéder à l'installation du programme.
 
 ## Démarrage du programme d'installation
 
-Sur la clé que vous avez préparé [à l'étape précédente](http://localhost:8000/fr/preparation/#preparer-la-cle-usb), double-cliquez sur `SLMSetup.exe`.
+Sur la clé que vous avez préparé [à l'étape précédente](preparation/#preparer-la-cle-usb), double-cliquez sur `SLMSetup.exe`.
 
 ![](/img/explorer-4.png)
 

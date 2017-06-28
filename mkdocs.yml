@@ -15,7 +15,11 @@ pages:
     - 'Installation': 'fr/installation.md'
     - 'Configuration': 'fr/configuration.md'
     - 'Réglages et plus': 'fr/reglagesetplus.md'
-  - 'School List Manager (english)': 'en.md'
+  - 'School List Manager (english)':
+    - 'Getting Started': 'en/gettingstarted.md'
+    - 'Installation': 'en/installation.md'
+    - 'First time setup': 'en/setup.md'
+    - 'Settings and more': 'en/settingsandmore.md'
 
 # Copyright
 copyright: 'Copyright &copy; 2017 Jean-Francois Desrochers'
