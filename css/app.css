@@ -564,6 +564,20 @@ iframe {
     top: 3px;
 }
 
+.idleprogress {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    margin: 0;
+    background-color: transparent;
+}
+
+.idleprogress .progress-bar {
+    background-color: rgba(0, 0, 0, 0.25)
+}
+
 .col1 {
     background-color: #9C2450;
 }

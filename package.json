@@ -1,6 +1,6 @@
 {
   "name": "schoollistman",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "School List Manager / Gestionnaire de Liste Scolaire by/par J-F Desrochers",
   "main": "main.js",
   "scripts": {

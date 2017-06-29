@@ -256,11 +256,38 @@ MainScreen.oninit = function () {
         self.pageParam = pageParam
         self.currentPage = newPage
     }
+    self.idleTime = 0
+    self.incTime = function () {
+        self.idleTime = self.idleTime + 1
+        if (self.idleTime >= 300) {
+            self.idleTime = 0
+            self.changePage('TitlePage')
+        }
+        m.redraw()
+    }
+    self.resetTime = function () {
+        self.idleTime = 0
+    }
+    self.idleInterval = setInterval(() => self.incTime(), 1000)
+    document.addEventListener('mousemove', self.resetTime)
+    document.addEventListener('keypress', self.resetTime)
+}
+
+MainScreen.onremove = function () {
+    let self = this
+    clearInterval(self.idleInterval)
+    document.removeEventListener('mousemove', self.resetTime)
+    document.removeEventListener('keypress', self.resetTime)
 }
 
 MainScreen.view = function () {
     let self = this
-    return m(MainScreen.pages[self.currentPage], {oncreate: anim.create, onremove: anim.remove, key: self.currentPage, pageParam: self.pageParam, changePage: self.changePage})
+    return [
+        m(MainScreen.pages[self.currentPage], {oncreate: anim.create, onremove: anim.remove, key: self.currentPage, pageParam: self.pageParam, changePage: self.changePage}),
+        m('div.progress.idleprogress', [
+            m('div.progress-bar', {style: `width: ${Math.floor(self.idleTime/300*100)}%;`})
+        ])
+    ]
 }
 
 module.exports = MainScreen
